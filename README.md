@@ -41,7 +41,7 @@ function getRating () {
 
 - [Video that helped me a lot](https://www.youtube.com/watch?v=vybZtSa3ofY)
 
-## Test the project on your device: [Teste the project here!!!](rating-responsive.vercel.app)
+## Test the project on your device: [Teste the project here!!!](https://rating-responsive-qlplj09br-lucasbailo.vercel.app/)
 
 - Min-widths: 1440px - 1024px - 768px
 

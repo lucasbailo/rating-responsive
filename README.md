@@ -39,6 +39,10 @@ function getRating () {
 }
 ```
 
+## Test the project device: [Teste the project here!!!](rating-responsive.vercel.app)
+
+- Min-widths: 1440px 1024px 768px
+
 ## Author
 
 - Website - [Lucas Bailo](https://github.com/lucasbailo)

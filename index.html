@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32_.png">
+  <link rel="stylesheet" href="/style/reset.css">
+  <link rel="stylesheet" href="/style/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
+  
+  
+  <title>Frontend Mentor | Interactive rating component</title>
+
+</head>
+<body>
+
+  <main>
+    <section class="card__template rating__state" data-mainPage>
+      <div class="card__content">
+        <!-- Rating state start -->
+
+        <div class="container__icon">
+          <img src="/images/icon-star.svg" alt="" aria-hidden="true">
+        </div>
+
+        <div>
+          <h2 class="main__title">How did we do?</h2>
+        </div>
+
+        <div>
+          <p class="main__description">Please let us know how we did with your support request. All feedback is appreciated 
+          to help us improve our offering!</p>
+        </div>
+
+        <div class="buttons_container" name="buttons_container">
+          
+          <div>
+            <input type="radio" name="rating" id="button1" class="checkbox__class" value="1">
+              <label for="button1">
+                <div class="container__button"><span>1</span></div>
+              </label>
+          </div>
+
+          <div>
+            <input type="radio" name="rating" id="button2" class="checkbox__class" value="2">
+              <label for="button2">
+                <div class="container__button"><span>2</span></div>
+              </label>
+          </div> 
+
+          <div>
+            <input type="radio" name="rating" id="button3" class="checkbox__class" value="3">
+              <label for="button3">
+                <div class="container__button"><span>3</span></div>
+              </label>
+          </div> 
+
+          <div>
+            <input type="radio" name="rating" id="button4" class="checkbox__class" value="4">
+              <label for="button4">
+                <div class="container__button"><span>4</span></div>
+              </label>
+          </div> 
+
+          <div>
+            <input type="radio" name="rating" id="button5" class="checkbox__class" value="5" checked>
+              <label for="button5">
+                <div class="container__button"><span>5</span></div>
+              </label>
+          </div> 
+        </div>  
+        <div class="submit__container">
+          <button type="button" class="submit_button" data-button>Submit</button>
+        </div>
+      </div>
+
+    </section>
+    
+    
+        <!-- Rating state end -->
+    <section class="card__template thankyou__state" data-thanksPage>
+      <div class="card__content"> <!-- Thank you state start -->
+        
+        <div class="thankyou__image-container">
+          <img src="./images/illustration-thank-you.svg" alt="" aria-hidden="true" class="thankyou__image">
+        </div>
+
+        <div class="rating-selected">
+          <div class="rating-selected__container">
+            <p class="rating-selected__text">
+              You selected <var class="rating_var" data-rating>5</var> <!-- Add rating here --> out of 5
+            </p>
+          </div>
+        </div>
+
+        <div class="thankyou__state-title">
+          <h2 class="main__title">Thank you!</h2>
+        </div>
+        <div class="thankyou__state-description">
+          <p class="main__description">
+            We appreciate you taking the time to give a rating. If you ever need more support, 
+            don't hesitate to get in touch!</p>
+        </div>
+
+        <div class="redo__button-container" data-redo>
+          <i class="fa-solid fa-arrow-rotate-left redo__button"></i>
+          <p class="redo__button-text">Change Rating</p>
+        </div>
+
+        <!-- Thank you state end -->
+      </div>
+    </section>
+    
+  </main>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+  <script src="https://kit.fontawesome.com/eb4de64db4.js" crossorigin="anonymous"></script>
+  <script src="./main.js"></script>
+</body>
+</html>

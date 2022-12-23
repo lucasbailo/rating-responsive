@@ -1,0 +1,275 @@
+
+/* ------ Variables to make our life easier! ------*/
+
+:root {
+    /*  Mobile: 375px
+        Desktop: 1440px   */
+
+/* Primary */
+
+--Orange: hsl(25, 97%, 53%);
+
+/* Neutral */
+
+--White: hsl(0, 0%, 100%);
+--Light-Grey: hsl(217, 12%, 63%);
+--Medium-Grey: hsl(216, 12%, 54%);
+--Dark-Blue: hsl(213, 19%, 18%);
+--Very-Dark-Blue: hsl(216, 12%, 8%);
+--Buttons-Background: rgb(50, 59, 68);
+
+/* Font */
+
+--font-Overpass: 'Overpass', sans-serif;
+
+/* ------ No more variables, just code! ------*/
+
+}
+
+body {
+    font-family: var(--font-Overpass);
+    background: var(--Very-Dark-Blue);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+}
+
+main {
+    padding: 2rem;
+}
+
+
+/* Main page state - here the JS will change the display to none when SUBMIT button is clicked*/
+.rating__state {
+    display: block;
+    transition: 1s; /* Didn't work, I'll try to fix it with toogle */
+}
+
+.card__template {
+    border: 1px solid var(--Dark-Blue);
+    background: var(--Dark-Blue);
+    border-radius: 20px;
+}
+
+.card__content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 1rem;
+}
+
+.container__icon {
+    border: 1px solid var(--Buttons-Background);
+    background: var(--Buttons-Background);
+    border-radius: 50%;
+    width: fit-content;
+    padding: .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.main__title {
+    color: var(--White);
+    font-size: 18px;
+
+}
+
+.main__description {
+    color: var(--Light-Grey);
+    line-height: 1.5rem;
+    font-size: 15px;
+}
+
+.buttons_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Here I had to change the button to a checkbox with a relation with the number container and then change the checkbox display to "none"*/
+
+.container__button {
+    display: flex;
+    background: var(--Buttons-Background);
+    color: var(--Light-Grey);
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--Buttons-Background);
+    border-radius: 50px;
+    height: 1rem;
+    width: 1rem;
+    padding: 0.7rem;
+}
+
+span {
+    margin-top: 0.2rem;
+}
+
+.container__button:hover {  /* Hover to create the sensation of an interactive button (change the colors when cursor is above)*/
+    border: 1px solid var(--Light-Grey);
+    background: var(--Light-Grey);
+    color: var(--White);
+}
+
+input:checked + label .container__button {  /* Here I hadt o create this relation to change the color off the "button" when it's checked*/
+    background: var(--Orange);
+    color: var(--White);
+    border: 1px solid var(--Orange);
+}
+
+.checkbox__class {  /* Here is how I hide the check-box display */
+    display: none;
+}
+
+.rating_number {
+    margin-top: 3px;
+}
+
+.submit_button {
+    background-color: var(--Orange);
+    border: 1px solid var(--Orange);
+    padding: .5rem;
+    text-transform: uppercase;
+    color: var(--White);
+    border-radius: 50px;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.submit_button:hover {
+    background-color: var(--White);
+    color: var(--Orange);
+    border: 1px solid var(--White);
+    cursor: pointer;
+}
+
+.submit_button:active {
+    background-color: var(--Light-Grey);
+    color: var(--Very-Dark-Blue);
+    border: 1px solid var(--Orange);
+    cursor: pointer;
+    transform: scale(0.98);
+}
+
+/* ----------------- "Thank You" page -----------------*/
+
+/* Thank you page state - here the JS will change the display to flex when SUBMIT button is clicked */
+
+.thankyou__state {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    transition: all 1.5s ease;
+}
+
+.thankyou__image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.thankyou__image {
+    width: 40%;
+}
+
+.rating-selected {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rating-selected__container {
+    display: flex;
+    justify-content: center;
+    background-color: var(--Buttons-Background);
+    color: var(--Orange);
+    border: 1px solid var(--Buttons-Background);
+    border-radius: 50px;
+    font-size: 12px;
+    padding: 5px;
+    width: 60%;
+    
+}
+
+
+/* ------ Redo Button to change the rating if the user want to ------ */
+
+.redo__button {
+    color: var(--Very-Dark-Blue)
+}
+
+.redo__button-text {
+    font-size: 14px;
+    color: var(--Very-Dark-Blue);
+    font-weight: 700;
+}
+
+.redo__button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-left: 50%;
+    margin-right: 50%;
+}
+
+
+.redo__button-container:hover {
+    cursor: pointer;
+}
+
+/* I'm pretty sure that there's a better way to do this two hover codes in only one, but I didn't find a way to do it!*/
+
+.redo__button-container:hover .redo__button-text {
+    color: var(--Orange);
+}
+
+.redo__button-container:hover .redo__button {
+    color: var(--Orange);
+
+}
+
+/* ------ Footer ------ */
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center;
+    color: var(--White);
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+    text-decoration: none;
+    color: var(--Orange);
+}
+
+
+@media screen and (min-width: 768px) {
+    main {
+        padding: 30%;
+    }
+}
+
+
+@media screen and (min-width: 1024px) {
+    main {
+        padding: 35%;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    main {
+        padding: 37%;
+    }
+}
+
+

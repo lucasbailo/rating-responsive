@@ -39,7 +39,7 @@ function getRating () {
 }
 ```
 
-## Test the project device: [Teste the project here!!!](rating-responsive.vercel.app)
+## Test the project on your device: [Teste the project here!!!](rating-responsive.vercel.app)
 
 - Min-widths: 1440px 1024px 768px
 
